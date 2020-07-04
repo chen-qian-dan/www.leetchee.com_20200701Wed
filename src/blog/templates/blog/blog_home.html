@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-
+{% extends "page/page_base.html" %}
+{% block content %}
     <body>
-        <h1>Blog Home</h1>
+        <!--posts is the key of context-->
+        <!--{{ a }} means a is variable-->
+        {% for post in posts %}
+            <h1>{{ post.title }}</h1>
+            <p>by {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content }}</p>
+        {% endfor %}
     </body>
-</html>
+{% endblock content %}
+
