@@ -14,5 +14,7 @@ class Post(models.Model):
     content     = models.TextField()
     image       = models.ImageField(upload_to = "blog_img/", blank=True)
     
-    
+    # Make sql result more script
+    def __str__(self):
+        return self.title
 
