@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>红荔枝 - {{ title }}</title>
+        {% else %}
+            <title>红荔枝</title>
+        {% endif %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
