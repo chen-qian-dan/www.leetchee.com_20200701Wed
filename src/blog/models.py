@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Post(models.Model):
+class Blog(models.Model):
     # on_delete=models.CASCADE means if the user is deleted, 
     # we want to delete all the posts from that user as well. 
     author      = models.ForeignKey(User, on_delete=models.CASCADE)
