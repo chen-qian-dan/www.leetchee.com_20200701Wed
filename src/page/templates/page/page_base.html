@@ -21,7 +21,7 @@
         <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
                 <div class="container">
-                    <a class="navbar-brand mr-4" href="/">红荔枝</a>
+                    <a class="navbar-brand mr-4" href="{% url 'page_home' %}">红荔枝</a>
                     <button class="navbar-toggler" 
                             type="button" 
                             data-toggle="collapse" 
@@ -33,8 +33,8 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarToggle">
                         <div class="navbar-nav mr-auto">
-                            <a class="nav-item nav-link" href=#>首页</a>
-                            <a class="nav-item nav-link" href=#>关于</a>
+                            <a class="nav-item nav-link" href="{% url 'page_home' %}">首页</a>
+                            <a class="nav-item nav-link" href="{% url 'page_about' %}">关于</a>
                         </div>
 
                         <!-- Navbar Right Side -->
