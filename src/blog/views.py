@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView 
 from .models import Blog
 
 # Create your views here.
@@ -26,3 +27,10 @@ def blog_home(request):
         'blogs': Blog.objects.all(),
     }
     return render(request, 'blog/blog_home.html', context)
+
+
+class PostListView(ListView):
+    model = Blog
+    template_name = 'blog/blog_home.html'
+    context_object_name = 'blogs'
+    ordering = ['-date_posted']
