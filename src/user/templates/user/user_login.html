@@ -1,4 +1,4 @@
-{% extends "page/page_base.html" %}
+{% extends 'page/page_base.html' %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -6,16 +6,16 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">注册</legend>
+                <legend class="border-bottom mb-4">登陆</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">注册</button>
+                <button class="btn btn-outline-info" type="submit">登陆</button>
             </div>
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                已有账号？<a class="ml-2" href="{% url 'user_login' %}">登陆</a>
+                需要一个新账号？现在就<a class="ml-2" href="{% url 'user_register' %}">注册</a>
             </small>
         </div>
     </div>
