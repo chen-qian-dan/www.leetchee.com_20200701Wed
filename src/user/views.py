@@ -18,4 +18,8 @@ def user_register(request):
         form = UserRegisterForm()
     context = {'form': form}
     return render(request, "user/user_register.html", context)
+
+
+def user_profile(request):
+    return render(request, 'user/user_profile.html')
     

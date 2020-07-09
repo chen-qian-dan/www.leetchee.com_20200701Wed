@@ -41,7 +41,7 @@
                         <div class="navbar-nav">
                             {% if user.is_authenticated %}
                                 <a class="nav-item nav-link" href=#>新建文章</a>
-                                <a class="nav-item nav-link" href=#>{{ user.username }} 的个人主页</a>
+                                <a class="nav-item nav-link" href="{% url 'user_profile' %}">{{ user.username }} 的个人主页</a>
                                 <a class="nav-item nav-link" href="{% url 'user_logout' %}">退出</a>
                             {% else %}
                                 <a class="nav-item nav-link" href="{% url 'user_login' %}">登陆</a>
