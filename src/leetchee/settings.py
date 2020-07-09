@@ -126,6 +126,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # tell crispy forms which css forms we want to use 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
