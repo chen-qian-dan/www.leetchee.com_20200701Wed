@@ -29,12 +29,12 @@ def blog_home(request):
     return render(request, 'blog/blog_home.html', context)
 
 
-class PostListView(ListView):
+class BlogListView(ListView):
     model = Blog
     template_name = 'blog/blog_home.html'
     context_object_name = 'blogs'
     ordering = ['-date_posted']
 
 
-class PostDetailView(DetailView):
+class BlogDetailView(DetailView):
     model = Blog
