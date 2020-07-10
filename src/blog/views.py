@@ -1,23 +1,23 @@
 from django.shortcuts import render
-from django.views.generic import ListView 
+from django.views.generic import ListView, DetailView
 from .models import Blog
 
 # Create your views here.
 
-posts = [
-    {
-        'author': 'Qian',
-        'title': 'ML',
-        'content': 'Machine Learning', 
-        'date_posted': 'July 02, 2020',
-    }, 
-    {
-        'author': 'Chen',
-        'title': 'CV',
-        'content': 'Computer Vision', 
-        'date_posted': 'July 02, 2020',
-    }
-]
+# posts = [
+#     {
+#         'author': 'Qian',
+#         'title': 'ML',
+#         'content': 'Machine Learning', 
+#         'date_posted': 'July 02, 2020',
+#     }, 
+#     {
+#         'author': 'Chen',
+#         'title': 'CV',
+#         'content': 'Computer Vision', 
+#         'date_posted': 'July 02, 2020',
+#     }
+# ]
 
 
 def blog_home(request):
@@ -34,3 +34,7 @@ class PostListView(ListView):
     template_name = 'blog/blog_home.html'
     context_object_name = 'blogs'
     ordering = ['-date_posted']
+
+
+class PostDetailView(DetailView):
+    model = Blog
